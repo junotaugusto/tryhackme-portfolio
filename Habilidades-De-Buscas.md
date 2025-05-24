@@ -1,101 +1,100 @@
-🛡️ Habilidades de Buscas
-📌 Introdução
-Na Internet, qualquer pessoa pode publicar conteúdos. Cabe a nós, como leitores, avaliar a confiabilidade dessas informações com base em:
+# Defensive Security Intro
 
-Fonte: Verifique se o autor ou organização é respeitável e com autoridade no tema.
+## Introdução
 
-Evidência e raciocínio: Busque alegações respaldadas por fatos e argumentos lógicos.
+Na Internet, qualquer pessoa pode publicar seus escritos — posts em blogs, artigos, publicações em redes sociais, ou até editar páginas públicas em wikis. Isso permite que alegações sem fundamento circulem livremente.
 
-Objetividade e viés: Prefira informações imparciais e com múltiplas perspectivas.
+É nosso papel, como leitores, avaliar essas informações. Aqui estão alguns pontos a considerar:
 
-Corroboração e consistência: Compare com múltiplas fontes confiáveis.
+### Avaliação de Informações
 
-🔍 Mecanismos de Busca
-A maioria dos buscadores permite buscas avançadas. Exemplos de operadores no Google:
+- **Fonte**: Verifique o autor ou a organização. São respeitáveis? Têm autoridade no assunto?
+- **Evidência e raciocínio**: Há fatos concretos e argumentos sólidos?
+- **Objetividade e viés**: A informação é imparcial? Considera múltiplas perspectivas?
+- **Corroboração e consistência**: A informação é confirmada por outras fontes confiáveis?
 
-"frase exata" → Busca por termos exatos.
-Ex: "passive reconnaissance"
+---
 
-site: → Restringe a busca a um domínio.
-Ex: site:tryhackme.com success stories
+## Mecanismos de Busca
 
-- → Exclui termos indesejados.
-Ex: pyramids -tourism
+### Operadores de Busca no Google
 
-filetype: → Busca arquivos específicos (PDF, DOC, XLS, PPT).
-Ex: filetype:ppt cyber security
+- `"frase exata"`: Busca páginas com a frase exata. Ex: `"passive reconnaissance"`
+- `site:`: Limita a busca a um domínio. Ex: `site:tryhackme.com success stories`
+- `-`: Exclui termos. Ex: `pyramids -tourism`
+- `filetype:`: Busca por tipo de arquivo. Ex: `filetype:ppt cyber security`
 
-📎 Operadores de Busca Avançada no Google
+> Consulte a documentação do seu mecanismo de busca favorito para outros operadores avançados.
 
-🎯 Mecanismos de Busca Especializados
-🔎 Shodan
-Busca dispositivos conectados à Internet (servidores, IoT, etc).
+---
 
-Exemplo: apache 2.4.1 retorna servidores com essa versão.
+## Mecanismos de Busca Especializados
 
-Ferramentas extras: Shodan Search Examples | Shodan Trends
+### Shodan
 
-🌐 Censys
-Foco em hosts, domínios, certificados, portas abertas e ativos da Internet.
+- Busca dispositivos conectados à Internet.
+- Ex: Buscar `apache 2.4.1` para encontrar servidores com essa versão.
+- [Shodan Search Query Examples](https://www.shodan.io/search/help)
+- [Shodan Trends](https://trends.shodan.io) (requer assinatura)
 
-Casos de uso:
+### Censys
 
-Descoberta de ativos não autorizados
+- Foco em hosts, sites, certificados e ativos de rede.
+- Casos de uso:
+  - Enumerar domínios
+  - Auditar portas abertas
+  - Descobrir ativos não autorizados
+- [Censys Use Cases](https://censys.io)
 
-Enumeração de domínios
+### VirusTotal
 
-Auditoria de serviços
+- Escaneia arquivos e URLs com múltiplos antivírus.
+- Permite verificar hashes.
+- Inclui comentários da comunidade para contextos adicionais.
+- [VirusTotal](https://www.virustotal.com)
 
-📎 Use Cases - Censys
+### Have I Been Pwned
 
-🦠 VirusTotal
-Analisa arquivos e URLs com múltiplos antivírus.
+- Verifica se seu e-mail apareceu em vazamentos de dados.
+- [Have I Been Pwned](https://haveibeenpwned.com)
 
-Permite envio de hashes.
+---
 
-Comunidade ajuda a interpretar falsos positivos.
+## Vulnerabilidades e Exploração
 
-🔐 Have I Been Pwned
-Verifica se um e-mail foi exposto em vazamentos de dados.
+### CVE (Common Vulnerabilities and Exposures)
 
-Senhas comprometidas podem afetar múltiplos serviços.
+- Dicionário padronizado de vulnerabilidades.
+- Ex: `CVE-2024-29988`
+- Mantido pela MITRE.
+- [CVE Program](https://www.cve.org)
+- [National Vulnerability Database](https://nvd.nist.gov)
 
-Reutilizar senhas é um risco crítico.
+### Exploit Database
 
-🛠️ Vulnerabilidades e Exploração
-📚 CVE - Common Vulnerabilities and Exposures
-Banco padronizado de vulnerabilidades (ex: CVE-2024-29988)
+- Repositório de códigos de exploit.
+- Muitos são verificados/testados.
+- [Exploit DB](https://www.exploit-db.com)
 
-Mantido pela MITRE.
+---
 
-Também disponível via National Vulnerability Database (NVD)
+## Documentação Técnica
 
-💥 Exploit Database
-Repositório público de códigos de exploits.
+### Linux Manual Pages (man pages)
 
-Ideal para testes em ambientes autorizados (ex: red teaming).
+- Ajuda oficial de comandos Linux/Unix.
+- Ex: `man ip` no terminal.
+- Também acessível via motores de busca com: `man ip`
 
-Muitos exploits são testados e validados.
+### Documentação de Produtos
 
-📖 Documentação Técnica
-📘 Linux Manual Pages
-Para ajuda de comandos no Linux/Unix-like, use man <comando>.
+- Fonte oficial e confiável de informações.
+- Exemplos:
+  - [Snort Documentation](https://docs.snort.org)
+  - [Apache HTTP Server](https://httpd.apache.org/docs/)
+  - [PHP Documentation](https://www.php.net/docs.php)
+  - [Node.js Docs](https://nodejs.org/en/docs/)
 
-Exemplo: man ip
+---
 
-Páginas man incluem comandos, funções, arquivos de config, etc.
-
-Também acessíveis via web.
-📎 man7.org - man ip
-
-📚 Documentação Oficial de Produtos
-Fontes oficiais são as mais completas e atualizadas:
-
-Snort Docs
-
-Apache HTTP Server Docs
-
-PHP Docs
-
-Node.js Docs
-
+> **Dica**: Sempre que possível, consulte a documentação oficial. É a fonte mais atualizada e completa.
