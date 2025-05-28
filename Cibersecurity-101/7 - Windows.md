@@ -200,3 +200,62 @@ A Microsoft introduziu o **UAC** no **Windows Vista** e manteve esse recurso nas
 - **Use contas padrão** e forneça permissões somente quando necessário via UAC.
 - **Nunca desative o UAC**, pois ele é uma camada extra importante de segurança.
 
+# 🧠 Gerenciador de Tarefas (Task Manager)
+
+O último tema abordado neste módulo é o **Gerenciador de Tarefas do Windows**.
+
+---
+
+## 📋 O que é o Task Manager?
+
+O **Task Manager** é uma ferramenta nativa do Windows que fornece **informações detalhadas** sobre:
+
+- Aplicativos em execução
+- Processos ativos (visíveis e em segundo plano)
+- Utilização de recursos do sistema
+
+---
+
+## ⚙️ Funcionalidades Principais
+
+### 🧩 Aplicativos e Processos
+
+Você pode visualizar:
+- Quais **aplicações** estão abertas
+- Quais **processos** (inclusive de sistema) estão ativos
+- A **prioridade** e o **impacto na inicialização** de cada processo
+
+### 📈 Desempenho (Performance)
+
+Na aba **"Desempenho"**, é possível monitorar:
+- **Uso de CPU** (porcentagem e núcleos)
+- **Memória RAM** (total, em uso, livre)
+- **Disco** (leitura e escrita)
+- **Rede** (uso da placa de rede e velocidade de upload/download)
+- **GPU** (em sistemas compatíveis)
+
+---
+
+## 🧰 Para que serve?
+
+- **Encerrar processos travados**
+- **Identificar consumo anormal de recursos**
+- **Analisar o impacto de programas na inicialização**
+- **Monitorar a saúde e a carga do sistema**
+
+---
+
+## ✅ Como abrir o Task Manager
+
+Existem várias formas de acessar o Gerenciador de Tarefas:
+
+- **Ctrl + Shift + Esc** (atalho direto)
+- **Ctrl + Alt + Del** → Gerenciador de Tarefas
+- Clique com o **botão direito na barra de tarefas** → Gerenciador de Tarefas
+
+---
+
+## 💡 Dica de Segurança
+
+O Task Manager também pode ser útil para **identificar processos maliciosos** ou suspeitos que estão sendo executados sem seu conhecimento. Fique atento a nomes estranhos, alto consumo de CPU/memória ou localização incomum dos executáveis.
+
