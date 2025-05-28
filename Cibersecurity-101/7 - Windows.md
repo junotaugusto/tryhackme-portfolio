@@ -70,10 +70,15 @@ NTFS é um sistema com recursos avançados de segurança, confiabilidade e desem
 
 #### 🆚 Comparando com FAT
 Característica	                    FAT16/FAT32	         NTFS
+
 Suporte a arquivos grandes	        ❌ (limite de 4GB)	✅ (acima de 4GB)
+
 Permissões e segurança	            ❌	                ✅ (Controle de Acesso - ACL)
+
 Compressão de arquivos	            ❌	                ✅
+
 Criptografia	                    ❌	                ✅ (EFS)
+
 Recuperação de erros (journaling)	❌	                ✅
 
 #### 📦 NTFS é um sistema de arquivos com journaling
