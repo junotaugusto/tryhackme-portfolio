@@ -152,5 +152,51 @@ Por padrão, **todo arquivo no NTFS possui pelo menos um fluxo de dados**, chama
 
 Para verificar os fluxos alternativos de um arquivo usando PowerShell:
 
-```powershell
+powershell
 Get-Item -Path .\arquivo.txt -Stream *
+
+## 🛡️ Privilégios de Administrador e o Controle de Conta de Usuário (UAC)
+
+A grande maioria dos usuários domésticos está logada em seus sistemas Windows como **administradores locais**. Lembre-se, conforme a tarefa anterior, que qualquer usuário com o tipo de conta "Administrador" pode fazer alterações no sistema.
+
+No entanto, **não é necessário estar com privilégios elevados** para realizar tarefas comuns, como:
+
+- Navegar na internet
+- Trabalhar em documentos (Word, Excel, etc.)
+- Acessar arquivos pessoais
+
+### ⚠️ O Problema:
+Executar o sistema como administrador **aumenta o risco de comprometimento**, pois **facilita a infecção por malware**. Isso acontece porque o malware será executado com os mesmos privilégios do usuário logado — ou seja, **com permissão para modificar o sistema**.
+
+---
+
+## 🛑 Como o Windows tenta mitigar esse risco?
+
+### ✅ **UAC - Controle de Conta de Usuário (User Account Control)**
+
+A Microsoft introduziu o **UAC** no **Windows Vista** e manteve esse recurso nas versões posteriores do sistema operacional.
+
+### 🔍 Como o UAC funciona?
+
+- Quando um usuário com tipo de conta **Administrador** faz login no sistema, **a sessão é iniciada sem privilégios elevados por padrão**.
+- Se uma operação exige permissões elevadas, o **UAC solicita confirmação ao usuário** para permitir ou negar a execução dessa ação.
+
+> **Nota:** O UAC, por padrão, **não se aplica à conta interna de administrador local** ("Built-in Administrator").
+
+---
+
+## 🔐 Verificando permissões via propriedades de arquivos
+
+1. Clique com o botão direito em um arquivo ou programa.
+2. Vá até a aba **"Segurança"**.
+3. Lá você verá os **usuários e grupos** com permissão sobre o arquivo.
+4. Observe que usuários padrão (sem privilégios elevados) normalmente **não aparecem listados** com permissões de modificação.
+
+---
+
+## ✅ Boas práticas:
+
+- **Evite usar a conta de administrador para tarefas do dia a dia.**
+- **Use contas padrão** e forneça permissões somente quando necessário via UAC.
+- **Nunca desative o UAC**, pois ele é uma camada extra importante de segurança.
+
