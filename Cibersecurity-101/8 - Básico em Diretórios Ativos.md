@@ -99,4 +99,23 @@ Se você já usou o Windows, sabe que é possível criar **grupos de usuários**
 | **Domain Computers**   | Inclui todos os computadores do domínio. |
 | **Domain Controllers** | Inclui todos os controladores de domínio (DCs) no domínio. |
 
+## Organizational Units (OUs)
+
+Ao abrir a janela do Active Directory, você poderá visualizar a **hierarquia de usuários, computadores e grupos** existentes no domínio. Esses objetos são organizados em **Unidades Organizacionais (Organizational Units – OUs)**, que são **objetos contêineres** usados para classificar usuários e máquinas.
+
+### Para que servem as OUs?
+
+As OUs são utilizadas principalmente para **agrupar usuários com requisitos de políticas semelhantes**. Por exemplo:
+
+- Pessoas do **departamento de Vendas** podem ter um conjunto de políticas diferentes das pessoas do **departamento de TI**.
+- Isso permite **aplicar políticas específicas por departamento** (como acesso a recursos, configurações de segurança, permissões etc.).
+
+> ⚠️ **Importante:** Um usuário **só pode pertencer a uma única OU por vez.**
+
+### Exemplo prático:
+- A OU "Financeiro" pode conter apenas os usuários e máquinas do setor financeiro.
+- A OU "TI" pode conter os administradores e os servidores usados pela equipe de tecnologia.
+
+Esse agrupamento facilita a administração centralizada e a aplicação de **GPOs (Group Policy Objects)** específicas para cada conjunto de usuários ou computadores.
+
 
