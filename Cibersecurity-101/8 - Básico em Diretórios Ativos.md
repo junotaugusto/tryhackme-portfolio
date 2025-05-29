@@ -37,3 +37,66 @@ Durante esta tarefa, assumiremos o papel do novo administrador de TI da **THM In
 
 Você terá **credenciais administrativas** sobre um **Controlador de Domínio (Domain Controller - DC)** pré-configurado para realizar essas atividades.
 
+# O Núcleo de um Domínio Windows: Active Directory Domain Services (AD DS)
+
+O núcleo de qualquer domínio Windows é o serviço **Active Directory Domain Services (AD DS)**. Esse serviço atua como um catálogo que armazena informações de todos os "objetos" existentes na rede. Entre os muitos objetos suportados pelo AD, temos:
+
+- Usuários
+- Grupos
+- Máquinas
+- Impressoras
+- Compartilhamentos (shares)
+- Entre outros
+
+---
+
+## Usuários
+
+Os usuários são um dos tipos de objetos mais comuns no Active Directory. Eles pertencem à categoria de **principais de segurança (security principals)**, o que significa que podem ser autenticados pelo domínio e receber permissões sobre recursos, como arquivos e impressoras.
+
+Usuários podem representar dois tipos de entidades:
+
+- **Pessoas**: usuários geralmente representam colaboradores da organização que precisam acessar a rede.
+- **Serviços**: alguns usuários são criados para rodar serviços, como IIS ou MSSQL. Cada serviço precisa de um usuário, que possui apenas os privilégios necessários para executar sua função específica.
+
+---
+
+## Máquinas
+
+As **máquinas** são outro tipo de objeto no Active Directory. Para cada computador que se junta ao domínio, um **objeto de máquina** é criado. Máquinas também são consideradas **principais de segurança** e recebem uma conta, assim como os usuários.
+
+- Essas contas têm direitos limitados no domínio.
+- A própria máquina é a administradora local do sistema.
+- Essas contas **não devem ser acessadas por humanos**, mas se a senha for conhecida, o login é possível.
+- As **senhas dessas contas são rotacionadas automaticamente** e geralmente têm **120 caracteres aleatórios**.
+
+### Como identificar contas de máquinas?
+
+As contas seguem um padrão específico: o nome do computador seguido de um cifrão `$`.  
+**Exemplo:** Um computador chamado `DC01` terá uma conta de máquina chamada `DC01$`.
+
+---
+
+## Grupos de Segurança
+
+Se você já usou o Windows, sabe que é possível criar **grupos de usuários** para conceder acesso a arquivos ou outros recursos. Isso facilita o gerenciamento, pois ao adicionar um usuário a um grupo, ele herda automaticamente todas as permissões do grupo.
+
+- Grupos de segurança também são **principais de segurança**.
+- Podem conter **usuários e máquinas** como membros.
+- Grupos podem conter **outros grupos** (aninhamento).
+
+---
+
+### Grupos de Segurança Padrão em um Domínio
+
+| **Grupo de Segurança** | **Descrição** |
+|------------------------|---------------|
+| **Domain Admins**      | Têm privilégios administrativos sobre todo o domínio. Por padrão, podem administrar qualquer computador, incluindo os Controladores de Domínio (DCs). |
+| **Server Operators**   | Podem administrar os DCs, mas **não** podem alterar membros de grupos administrativos. |
+| **Backup Operators**   | Podem acessar qualquer arquivo ignorando permissões, utilizados para realizar backups. |
+| **Account Operators**  | Podem criar ou modificar outras contas no domínio. |
+| **Domain Users**       | Inclui todas as contas de usuário existentes no domínio. |
+| **Domain Computers**   | Inclui todos os computadores do domínio. |
+| **Domain Controllers** | Inclui todos os controladores de domínio (DCs) no domínio. |
+
+
