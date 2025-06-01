@@ -61,7 +61,6 @@ Quando o usuário quer se conectar a um serviço (como um compartilhamento de ar
 
 ### 📌 Resumo Visual
 
-```mermaid
 sequenceDiagram
     participant Usuário
     participant KDC
