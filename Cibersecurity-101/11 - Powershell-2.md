@@ -36,5 +36,17 @@ Exibe informações detalhadas sobre um cmdlet:
 Este cmdlet é **fundamental** para aprender a usar comandos no PowerShell.
 
 💡 **Dica:** Use `-Examples` ao final para ver exemplos práticos:
-```powershell
+
 Get-Help Get-Process -Examples
+
+## ⚡ Aliases (Atalhos)
+Para facilitar a transição de profissionais de TI acostumados com outros terminais, o PowerShell inclui aliases — que são nomes alternativos para cmdlets.
+
+dir é um alias para Get-ChildItem
+
+cd é um alias para Set-Location
+
+Use Get-Alias para listar todos os aliases disponíveis.
+
+## 🌐 Onde Encontrar e Baixar Cmdlets
+Uma funcionalidade poderosa do PowerShell é a possibilidade de estender seus recursos com cmdlets adicionais, baixando-os de repositórios online, como a PowerShell Gallery.
