@@ -68,7 +68,3 @@ Nos próximos estudos, vamos abordar:
 - Os protocolos **UDP** e **TCP** da camada de transporte
 
 Esses são **blocos fundamentais** da comunicação na internet moderna.
-
----
-
-> 🧠 Este material faz parte do caderno digital de estudos de redes e cibersegurança de Junot (TryHackMe - Conceitos de Rede).
