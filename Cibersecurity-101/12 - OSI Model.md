@@ -1,4 +1,4 @@
-# Conceitos de Rede - Modelo OSI (Tradução e Comentários)
+# Conceitos de Rede - Modelo OSI
 
 Antes de começarmos, vale ressaltar que o modelo OSI pode parecer complicado à primeira vista. Não se preocupe se encontrar siglas enigmáticas, pois forneceremos exemplos das camadas do modelo OSI. Garantimos que, ao final deste módulo, esse conteúdo parecerá muito fácil.
 
@@ -29,7 +29,7 @@ Você também pode procurar na internet outras frases mnemônicas que sejam mais
 
 A **camada física**, também chamada de **camada 1**, trata da conexão física entre dispositivos. Isso inclui o meio de transmissão (como um cabo) e a definição dos bits binários 0 e 1. A transmissão de dados pode ocorrer via sinal elétrico, óptico ou sem fio. Consequentemente, são necessários cabos de dados ou antenas, dependendo do meio físico.
 
-Além de cabos Ethernet (mostrados na ilustração abaixo) e cabos de fibra óptica, outros exemplos de meios da camada física incluem bandas de rádio WiFi, como:
+Além de cabos Ethernet e cabos de fibra óptica, outros exemplos de meios da camada física incluem bandas de rádio WiFi, como:
 
 - Banda de 2.4 GHz  
 - Banda de 5 GHz  
