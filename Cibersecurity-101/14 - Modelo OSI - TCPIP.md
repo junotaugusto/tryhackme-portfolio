@@ -28,7 +28,7 @@ Enquanto o modelo OSI foi apresentado de **baixo para cima (da camada 1 à 7)**,
 | 2     | **Transport Layer**    | Camada 4                          | Gerencia a comunicação fim a fim |
 | 3     | **Internet Layer**     | Camada 3 (rede)                   | Responsável por endereçamento e roteamento |
 | 4     | **Link Layer**         | Camada 2 (enlace)                 | Comunicação entre dispositivos no mesmo meio |
-| -     | *(Physical Layer)*     | Camada 1 (física)                 | Às vezes incluída em versões com 5 camadas |
+| -     | **Physical Layer**     | Camada 1 (física)                 | Às vezes incluída em versões com 5 camadas |
 
 ---
 
