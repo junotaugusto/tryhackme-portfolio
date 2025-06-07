@@ -56,11 +56,7 @@ Os endereços utilizados nesses protocolos são chamados de **endereços MAC** (
 
 > 💡 Comentário: Os três primeiros bytes do endereço MAC indicam o **fabricante do dispositivo de rede**.
 
-Durante uma comunicação real via Ethernet ou WiFi, esperamos ver **dois endereços MAC** em cada quadro (frame):
-
-- **Endereço de destino** (MAC): indicado em **amarelo** no exemplo
-- **Endereço de origem** (MAC): indicado em **azul**
-- Os bits restantes representam os dados sendo transmitidos
+Durante uma comunicação real via Ethernet ou WiFi, esperamos ver **dois endereços MAC** em cada quadro (frame).
 
 > 💡 Comentário: A camada 2 é responsável por **entregar os dados dentro do mesmo segmento de rede**. Ela também lida com erros de transmissão locais e controle de fluxo no enlace.
 
