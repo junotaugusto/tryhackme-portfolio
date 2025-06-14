@@ -6,7 +6,7 @@ Neste contexto, **encapsulamento** refere-se ao processo em que **cada camada ad
 
 Esse conceito é essencial porque **permite que cada camada se concentre exclusivamente em sua função**. Na imagem abaixo, temos as seguintes quatro etapas:
 
-![alt text](image.png)
+![alt text](quatro-etapas-encapsulamento.png)
 
 O processo precisa ser **invertido no lado do receptor**, até que os dados da aplicação sejam extraídos.
 
