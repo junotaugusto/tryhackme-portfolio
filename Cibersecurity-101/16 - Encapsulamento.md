@@ -4,7 +4,9 @@ Antes de concluir, é fundamental explicar outro conceito-chave: **encapsulament
 
 Neste contexto, **encapsulamento** refere-se ao processo em que **cada camada adiciona um cabeçalho (e, às vezes, um rodapé)** à unidade de dados recebida e envia essa unidade “encapsulada” para a camada inferior.
 
-Esse conceito é essencial porque **permite que cada camada se concentre exclusivamente em sua função**. Na imagem abaixo, temos as seguintes quatro etapas: *(inserir aqui)*.
+Esse conceito é essencial porque **permite que cada camada se concentre exclusivamente em sua função**. Na imagem abaixo, temos as seguintes quatro etapas:
+
+![alt text](image.png)
 
 O processo precisa ser **invertido no lado do receptor**, até que os dados da aplicação sejam extraídos.
 
