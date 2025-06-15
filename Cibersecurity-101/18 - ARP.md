@@ -40,7 +40,9 @@ No entanto, se você for **enviar um pacote diretamente a outro dispositivo na m
 
 ### 📦 Exemplo de um quadro Ethernet
 
-Na captura abaixo (não exibida aqui), podemos ver **um pacote IP encapsulado em um quadro Ethernet**.
+Na captura abaixo, podemos ver **um pacote IP encapsulado em um quadro Ethernet**.
+
+![alt text](wireshark-traffic.png)
 
 O **cabeçalho do quadro Ethernet** contém:
 
