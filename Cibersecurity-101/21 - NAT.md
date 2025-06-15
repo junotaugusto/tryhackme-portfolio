@@ -53,4 +53,5 @@ A **tabela NAT** no roteador manterá esse mapeamento enquanto a conexão estive
 - É amplamente usado em **residências, empresas** e por **provedores de Internet**.
 - Resolve parte do problema do esgotamento de endereços no IPv4.
 
----
+![alt text](image-3.png)
+
