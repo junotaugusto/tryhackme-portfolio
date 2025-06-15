@@ -77,5 +77,7 @@ user@TryHackMe$ tcpdump -r arp.pcapng -n -v<br>
 17:23:44.510182 ARP, Ethernet (len 6), IPv4 (len 4), Reply 192.168.66.1 is-at 44:df:65:d8:fe:6c, length 28<br>
 
 
-> 🔎 **Observação importante:** Um ARP Request ou ARP Reply **não é encapsulado em um pacote UDP nem IP**. Ele é encapsulado **diretamente dentro de um quadro Ethernet** (ou seja, atua puramente na camada de enlace — Layer 2).
+> 🔎 **Observação importante:** Um ARP Request ou ARP Reply **não é encapsulado em um pacote UDP nem IP**. Ele é encapsulado **diretamente dentro de um quadro Ethernet** (ou seja, atua puramente na camada de enlace — Layer 2). A próxima imagem mostra isso.
+
+![alt text](wireshark-traffic-2.png)
 
