@@ -27,10 +27,10 @@ Os dispositivos em uma rede Ethernet **não precisam conhecer os MACs uns dos ou
 
 Você conecta seu dispositivo à rede de uma cafeteria. Se houver um **servidor DHCP**, ele atribui ao seu dispositivo:
 
-* Um IP válido
-* A máscara de sub-rede
-* O endereço IP do roteador (gateway)
-* O IP do servidor DNS
+* Um IP válido _(endereço lógico único dentro da rede local)_
+* A máscara de sub-rede _(define qual parte do IP representa a rede e qual representa os hosts)_
+* O endereço IP do roteador (gateway) _(usado para enviar pacotes para fora da rede local)_
+* O IP do servidor DNS _(responsável por traduzir nomes de domínios para endereços IP)_
 
 Com isso, seu computador **conhece o IP do roteador** (para sair pra Internet) e o **IP do servidor DNS** (para resolver domínios). Até aqui, **nenhum endereço MAC foi revelado**.
 
