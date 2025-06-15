@@ -76,11 +76,11 @@ O protocolo DHCP segue quatro etapas principais conhecidas pela sigla **DORA** (
 
 O trecho abaixo mostra uma captura de pacotes ilustrando os quatro passos do processo DORA. Neste exemplo, o cliente recebe o endereço IP `192.168.66.133`.
 
-user@TryHackMe$ tshark -r DHCP-G5000.pcap -n
-1 0.000000 0.0.0.0 → 255.255.255.255 DHCP 342 DHCP Discover - Transaction ID 0xfb92d53f. 
-2 0.013904 192.168.66.1 → 192.168.66.133 DHCP 376 DHCP Offer - Transaction ID 0xfb92d53f. 
-3 4.115318 0.0.0.0 → 255.255.255.255 DHCP 342 DHCP Request - Transaction ID 0xfb92d53f. 
-4 4.228117 192.168.66.1 → 192.168.66.133 DHCP 376 DHCP ACK - Transaction ID 0xfb92d53f. 
+user@TryHackMe$ tshark -r DHCP-G5000.pcap -n <br>
+1 0.000000 0.0.0.0 → 255.255.255.255 DHCP 342 DHCP Discover - Transaction ID 0xfb92d53f <br>
+2 0.013904 192.168.66.1 → 192.168.66.133 DHCP 376 DHCP Offer - Transaction ID 0xfb92d53f <br>
+3 4.115318 0.0.0.0 → 255.255.255.255 DHCP 342 DHCP Request - Transaction ID 0xfb92d53f <br>
+4 4.228117 192.168.66.1 → 192.168.66.133 DHCP 376 DHCP ACK - Transaction ID 0xfb92d53f <br>
 
 
 ### 🧠 Análise da Troca de Pacotes
