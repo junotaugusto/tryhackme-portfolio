@@ -21,7 +21,6 @@ Obviamente, existe **mais de um caminho** (ou rota) conectando o usuário móvel
 
 Os algoritmos de roteamento são complexos e vão além do escopo desta introdução. No entanto, é importante conhecer os principais **protocolos de roteamento**, pois eles são fundamentais para o funcionamento da Internet.
 
-*️⃣ *Esses protocolos são como "regras de navegação" para os roteadores. Cada um tem sua lógica e aplicação ideal.*
 
 ---
 
