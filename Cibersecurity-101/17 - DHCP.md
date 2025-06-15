@@ -47,3 +47,27 @@ A solução para essa configuração automática é o DHCP (Protocolo de Configu
 ### Comentários adicionais
 
 Esse protocolo é fundamental para o funcionamento simples e eficiente das redes atuais, principalmente em ambientes onde dispositivos se conectam e desconectam com frequência, como cafés, aeroportos e redes domésticas. Sem o DHCP, você teria que configurar manualmente os dados da rede em cada dispositivo que usasse, o que é impraticável e sujeito a erros.
+
+## Processo DORA do DHCP
+
+O protocolo DHCP segue quatro etapas principais conhecidas pela sigla **DORA** (Discover, Offer, Request, Acknowledge):
+
+![alt text](image.png)
+
+- **DHCP Discover**  
+  O cliente envia uma mensagem **DHCPDISCOVER** em broadcast (para todos na rede), procurando por um servidor DHCP.  
+  _→ O cliente ainda não tem IP, então precisa "gritar" na rede pedindo ajuda._
+
+- **DHCP Offer**  
+  O servidor DHCP responde com uma mensagem **DHCPOFFER**, oferecendo um endereço IP disponível.  
+  _→ O servidor diz: “Ei, você pode usar este IP aqui!”. Também informa máscara, gateway e DNS._
+
+- **DHCP Request**  
+  O cliente envia uma mensagem **DHCPREQUEST** de volta, dizendo que aceita o IP oferecido.  
+  _→ Como se dissesse: “Beleza, eu aceito esse IP que você me ofereceu.”_
+
+- **DHCP Acknowledge**  
+  O servidor confirma a alocação com uma mensagem **DHCPACK**.  
+  _→ “Confirmado! Esse IP agora é seu, pode usar.”_
+
+> ✅ Esse processo evita conflitos e torna a conexão automática e eficiente, principalmente para dispositivos móveis.
