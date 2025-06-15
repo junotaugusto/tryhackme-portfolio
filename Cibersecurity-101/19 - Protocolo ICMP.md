@@ -99,3 +99,37 @@ traceroute to example.com (93.184.215.14), 30 hops max, 60 byte packets  <br>
 *🔸 Nem sempre as respostas ICMP "Time Exceeded" chegam até nós — podem ser filtradas por firewalls ou políticas de roteadores.*  
 *🔸 A rota percorrida pode variar se o comando for executado novamente, pois a Internet é dinâmica e usa diferentes caminhos conforme a rede está congestionada ou balanceada.*
 
+## 📡 Entendendo o TTL e o traceroute
+
+### ✅ 1. Por que o TTL de um site é diferente do de outro?
+
+O TTL (*Time to Live*) é um campo no cabeçalho IP que limita a vida útil de um pacote na rede, impedindo que ele circule infinitamente em loops de roteamento.
+
+Cada sistema (servidor, roteador, etc.) define um valor **inicial** de TTL ao enviar um pacote. Exemplos comuns:
+
+- Linux: TTL inicial = **64**
+- Windows: TTL inicial = **128**
+- Cisco: TTL inicial = **255**
+- Servidores da Google: TTL inicial = **64** ou **115**
+
+🔍 **Exemplo:**  
+Se você recebe um pacote com TTL = 53, e o sistema de origem usou TTL = 64, então o pacote passou por **11 roteadores** (64 - 53 = 11).
+
+👉 **Resumo:** Sites diferentes usam sistemas operacionais e configurações diferentes, por isso seus pacotes começam com TTLs distintos.
+
+---
+
+### ✅ 2. Por que existe esse limite de hops? Qual é o objetivo?
+
+O **limite de hops (TTL)** foi criado para:
+
+- ⛔ **Evitar loops infinitos:**  
+  Se houver um erro de roteamento (por exemplo, dois roteadores encaminhando pacotes entre si em um loop), o TTL garante que o pacote será descartado após certo número de saltos.
+  
+- 🛡️ **Proteger a infraestrutura da Internet:**  
+  Evita sobrecarga acidental ou maliciosa nos roteadores e na rede.
+
+- 🧭 **Ajudar no diagnóstico:**  
+  O TTL é essencial para ferramentas como o `traceroute`, que revelam o caminho (roteadores intermediários) que um pacote percorre até seu destino.
+
+---
