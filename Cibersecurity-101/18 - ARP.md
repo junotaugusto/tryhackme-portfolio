@@ -81,3 +81,4 @@ user@TryHackMe$ tcpdump -r arp.pcapng -n -v<br>
 
 ![alt text](wireshark-traffic-2.png)
 
+A discussão sobre a qual camada o ARP (Address Resolution Protocol) pertence é comum. Ele é considerado da Camada 2 porque lida diretamente com endereços MAC. No entanto, outros argumentam que ele pertence à Camada 3 por suportar operações de IP. O essencial a saber é que o ARP permite a tradução do endereçamento da Camada 3 para o endereçamento da Camada 2.
