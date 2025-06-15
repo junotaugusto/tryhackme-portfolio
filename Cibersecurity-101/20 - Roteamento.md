@@ -15,7 +15,7 @@ Obviamente, existe **mais de um caminho** (ou rota) conectando o usuário móvel
 
 *️⃣ *Mais de um caminho significa mais de uma escolha — e é aí que entram os algoritmos: para escolher a rota ideal com base em critérios como velocidade, custo ou distância.*
 
----
+![alt text](https://tryhackme-images.s3.amazonaws.com/user-uploads/5f04259cf9bf5b57aed2c476/room-content/5f04259cf9bf5b57aed2c476-1719849333579.svg)
 
 ## 🧠 Algoritmos e Protocolos de Roteamento
 
