@@ -1,6 +1,6 @@
 # ARP – Address Resolution Protocol
 
-No módulo sobre **Conceitos de Rede** vimos que, ao se comunicarem em uma rede, dois hosts transmitem pacotes IP encapsulados dentro de quadros da camada de enlace (Layer 2). As duas tecnologias mais comuns usadas nessa camada são **Ethernet (IEEE 802.3)** e **WiFi (IEEE 802.11)**.
+No módulo sobre **Conceitos de Rede** vimos que, ao se comunicarem em uma rede, dois hosts transmitem pacotes IP encapsulados dentro de quadros da camada de enlace (Layer 2), ou seja, o pacote IP (da camada de rede) precisa ser "embrulhado" em um quadro apropriado para o tipo de rede utilizada — como **Ethernet (IEEE 802.3)** ou **WiFi (IEEE 802.11)**.
 
 Sempre que um host precisa se comunicar com outro **na mesma rede local (LAN)**, ele deve **enviar o pacote IP dentro de um quadro Ethernet ou WiFi**. Mesmo conhecendo o **endereço IP** do host de destino, ele ainda precisa descobrir o **endereço MAC** desse host para poder montar corretamente o cabeçalho do quadro da camada de enlace.
 
