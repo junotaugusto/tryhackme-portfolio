@@ -9,9 +9,11 @@ Você foi até sua cafeteria favorita, pegou sua bebida quente preferida e abriu
 Sempre que queremos acessar uma rede, no mínimo precisamos configurar:
 
 - Endereço IP junto com a máscara de sub-rede
+    _IP identifica seu dispositivo na rede; a máscara define a parte da rede e a parte do host._  
 - Roteador (ou gateway)
+      _Dispositivo que conecta sua rede local à Internet ou a outras redes._ 
 - Servidor DNS
-
+      _Responsável por traduzir nomes de domínio (ex: tryhackme.com) em endereços IP que os computadores entendem._
 ---
 
 ## Configuração manual vs. automática
