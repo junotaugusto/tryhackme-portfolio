@@ -54,3 +54,48 @@ Esses valores ajudam a **avaliar a qualidade da conexão** com o host de destino
 *🔹 `icmp_seq` indica o número sequencial do pacote ICMP enviado. É útil para identificar se houve perda de pacotes ou alteração na ordem de chegada.*  
 *🔹 `ttl` (time to live) representa o número máximo de saltos (hops) que o pacote pode dar até ser descartado. Cada roteador decrementa esse valor em 1. Isso ajuda a evitar loops infinitos na rede.*  
 *🔹 Um firewall pode estar configurado para bloquear pacotes ICMP por questões de segurança, impedindo o funcionamento do ping, mesmo que o host esteja online.*  
+
+## Traceroute
+
+Como podemos fazer com que **cada roteador entre o nosso sistema e o destino revele-se**?
+
+O protocolo IP possui um campo chamado **TTL (Time-to-Live)**, que indica o número máximo de roteadores pelos quais um pacote pode passar antes de ser descartado. Cada roteador **reduz o valor de TTL em um** antes de encaminhar o pacote. Quando o TTL chega a zero, o roteador **descarta o pacote** e envia uma mensagem **ICMP Time Exceeded (ICMP Tipo 11)**.
+
+*⚠️ Neste contexto, “tempo” não se refere a segundos, e sim ao número de roteadores (hops).*
+
+O comando `traceroute` (em sistemas Linux e UNIX-like) ou `tracert` (no Windows) **aproveita esse mecanismo para mapear o caminho até o destino**. Ele envia pacotes com TTLs crescentes (1, 2, 3…) e registra as respostas ICMP. Isso permite identificar cada roteador que responde com uma mensagem de “tempo excedido”.
+
+No terminal abaixo, vemos o resultado da execução do `traceroute` para o domínio `example.com`.
+
+---
+
+### Terminal
+
+user@TryHackMe$ traceroute example.com  <br>
+traceroute to example.com (93.184.215.14), 30 hops max, 60 byte packets  <br>
+1  _gateway (192.168.66.1)  4.414 ms  4.342 ms  4.320 ms  <br>
+2  192.168.11.1 (192.168.11.1)  5.849 ms  5.830 ms  5.811 ms  <br>
+3  100.104.0.1 (100.104.0.1)  11.130 ms  11.111 ms  11.093 ms  <br>
+4  10.149.1.45 (10.149.1.45)  6.156 ms  6.138 ms  6.120 ms  <br>
+5  * * *  <br>
+6  * * *  <br>
+7  * * *  <br>
+8  172.16.48.1 (172.16.48.1)  5.667 ms  8.165 ms  6.861 ms  <br>
+9  ae81.edge4.Marseille1.Level3.net (212.73.201.45)  50.811 ms  52.857 ms 213.242.116.233 (213.242.116.233)  52.798 ms  <br>
+10  NTT-level3-Marseille1.Level3.net (4.68.68.150)  93.351 ms  79.897 ms  79.804 ms  <br>
+11  ae-9.r20.parsfr04.fr.bb.gin.ntt.net (129.250.3.38)  62.935 ms  62.908 ms  64.313 ms  <br>
+12  ae-14.r21.nwrknj03.us.bb.gin.ntt.net (129.250.4.194)  141.816 ms  141.782 ms  141.757 ms  <br>
+13  ae-1.a02.nycmny17.us.bb.gin.ntt.net (129.250.3.17)  145.786 ms ae-1.a03.nycmny17.us.bb.gin.ntt.net (129.250.3.128)  141.701 ms  147.586 ms  <br>
+14  ce-0-3-0.a02.nycmny17.us.ce.gin.ntt.net (128.241.1.14)  148.692 ms ce-3-3-0.a03.nycmny17.us.ce.gin.ntt.net (128.241.1.90)  141.615 ms ce-0-3-0.a02.nycmny17.us.ce.gin.ntt.net (128.241.1.14)  148.168 ms  <br>
+15  ae-66.core1.nyd.edgecastcdn.net (152.195.69.133)  141.100 ms ae-65.core1.nyd.edgecastcdn.net (152.195.68.133)  140.360 ms ae-66.core1.nyd.edgecastcdn.net (152.195.69.133)  140.638 ms  <br>
+16  93.184.215.14 (93.184.215.14)  140.574 ms  140.543 ms  140.514 ms  <br>
+17  93.184.215.14 (93.184.215.14)  140.488 ms  139.397 ms  141.854 ms  <br>
+
+---
+
+*🔸 Alguns roteadores (como nos saltos 5, 6 e 7) não responderam. Eles descartaram os pacotes silenciosamente, sem enviar mensagens ICMP de volta.*  
+*🔸 Roteadores pertencentes ao seu provedor (ISP) podem responder com endereços IP privados (como 192.168.x.x ou 10.x.x.x).*  
+*🔸 Outros roteadores revelam seus IPs públicos, e podemos até fazer pesquisas reversas para descobrir o nome de domínio e localização geográfica.*  
+*🔸 Nem sempre as respostas ICMP "Time Exceeded" chegam até nós — podem ser filtradas por firewalls ou políticas de roteadores.*  
+*🔸 A rota percorrida pode variar se o comando for executado novamente, pois a Internet é dinâmica e usa diferentes caminhos conforme a rede está congestionada ou balanceada.*
+
