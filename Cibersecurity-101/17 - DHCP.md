@@ -50,12 +50,12 @@ Esse protocolo é fundamental para o funcionamento simples e eficiente das redes
 
 ## Processo DORA do DHCP
 
-O protocolo DHCP segue quatro etapas principais conhecidas pela sigla **DORA** (Discover, Offer, Request, Acknowledge):
+O protocolo DHCP segue quatro etapas principais conhecidas pela sigla **DORA** (Discover, Offer, Request, Acknowledge). Sempre que você se conecta a uma nova rede, seu computador (dispositivo) faz o processo DORA para obter um IP válido para aquela rede específica. Além disso, mesmo dentro da mesma rede, seu computador pode solicitar um novo IP se o IP anterior expirou (o "aluguel" venceu – chamado lease time), a rede foi reiniciada ou se você desligou e ligou o Wi-Fi/manualmente renovou o IP.
 
 ![alt text](image.png)
 
 - **DHCP Discover**  
-  O cliente envia uma mensagem **DHCPDISCOVER** em broadcast (para todos na rede), procurando por um servidor DHCP.  
+  O cliente envia uma mensagem **DHCPDISCOVER** em broadcast (para todos na rede), procurando por um servidor DHCP (pode ser um roteador, por exemplo).  
   _→ O cliente ainda não tem IP, então precisa "gritar" na rede pedindo ajuda._
 
 - **DHCP Offer**  
@@ -71,3 +71,35 @@ O protocolo DHCP segue quatro etapas principais conhecidas pela sigla **DORA** (
   _→ “Confirmado! Esse IP agora é seu, pode usar.”_
 
 > ✅ Esse processo evita conflitos e torna a conexão automática e eficiente, principalmente para dispositivos móveis.
+
+## 🧪 Exemplo de Captura de Pacotes DHCP (DORA)
+
+O trecho abaixo mostra uma captura de pacotes ilustrando os quatro passos do processo DORA. Neste exemplo, o cliente recebe o endereço IP `192.168.66.133`.
+
+user@TryHackMe$ tshark -r DHCP-G5000.pcap -n
+1 0.000000 0.0.0.0 → 255.255.255.255 DHCP 342 DHCP Discover - Transaction ID 0xfb92d53f
+2 0.013904 192.168.66.1 → 192.168.66.133 DHCP 376 DHCP Offer - Transaction ID 0xfb92d53f
+3 4.115318 0.0.0.0 → 255.255.255.255 DHCP 342 DHCP Request - Transaction ID 0xfb92d53f
+4 4.228117 192.168.66.1 → 192.168.66.133 DHCP 376 DHCP ACK - Transaction ID 0xfb92d53f
+
+
+### 🧠 Análise da Troca de Pacotes
+
+- O cliente **ainda não tem nenhuma configuração de IP** quando começa o processo. Ele só possui o **endereço MAC**.
+- Nos pacotes **1 (DHCP Discover)** e **3 (DHCP Request)**, o cliente envia pacotes do IP `0.0.0.0` para `255.255.255.255`, ou seja, **broadcast** (transmissão para todos na rede), já que ainda não tem IP.
+- No nível da camada de enlace (Ethernet), ele também envia para o **endereço MAC de broadcast**: `ff:ff:ff:ff:ff:ff`. (Esse detalhe não aparece na saída do `tshark`, mas é conhecido pelo funcionamento do protocolo).
+- O servidor DHCP (neste caso, `192.168.66.1`) **responde com uma oferta de IP** (`DHCP Offer`) e depois **confirma com o DHCP ACK**.
+- O servidor envia a oferta usando o endereço MAC do cliente como destino.
+
+### 📦 Resultado do Processo DHCP
+
+Ao final do processo, o dispositivo cliente (computador) terá recebido:
+
+- ✅ Um **endereço IP alocado** (lease) para acessar os recursos da rede.
+- ✅ O **gateway (roteador)** para enviar pacotes para fora da rede local.
+- ✅ Um **servidor DNS** para resolver nomes de domínio como `google.com`.
+
+Essas configurações permitem que o dispositivo acesse **a rede local** e também **a Internet**, se disponível.
+
+
+
