@@ -56,3 +56,26 @@ O **cabeçalho do quadro Ethernet** contém:
 
 Quando um dispositivo quer mandar um pacote para outro **dentro da mesma rede local**, ele precisa saber **o endereço MAC do destino**, mesmo que já saiba o IP. Para isso, usamos o protocolo ARP — que veremos logo em seguida.
 
+## Protocolo de Resolução de Endereço (ARP)
+
+O **Address Resolution Protocol (ARP)** permite descobrir o endereço MAC de outro dispositivo em uma rede Ethernet. No exemplo abaixo, um host com o endereço IP `192.168.66.89` deseja se comunicar com outro sistema com o IP `192.168.66.1`.
+
+Ele envia uma requisição ARP (**ARP Request**) perguntando qual dispositivo possui o IP `192.168.66.1`. Essa requisição é enviada do endereço MAC do solicitante para o endereço MAC de broadcast `ff:ff:ff:ff:ff:ff` (ou seja, para todos os dispositivos na rede), como mostrado no primeiro pacote.
+
+Logo em seguida, o host com o IP `192.168.66.1` responde com seu endereço MAC, por meio de uma resposta ARP (**ARP Reply**). A partir desse momento, os dois hosts podem trocar quadros na camada de enlace (Layer 2) diretamente.
+
+### Terminal
+user@TryHackMe$ tshark -r arp.pcapng -Nn <br>
+1 0.000000000 cc:5e:f8:02:21:a7 → ff:ff:ff:ff:ff:ff ARP 42 Who has 192.168.66.1? Tell 192.168.66.89 <br>
+2 0.003566632 44:df:65:d8:fe:6c → cc:5e:f8:02:21:a7 ARP 42 192.168.66.1 is at 44:df:65:d8:fe:6c <br>
+
+Se usarmos o `tcpdump`, os pacotes serão exibidos de forma diferente. Ele usa os termos ARP Request e ARP Reply de maneira mais explícita. Veja o exemplo abaixo.
+
+### Terminal
+user@TryHackMe$ tcpdump -r arp.pcapng -n -v<br>
+17:23:44.506615 ARP, Ethernet (len 6), IPv4 (len 4), Request who-has 192.168.66.1 tell 192.168.66.89, length 28 <br>
+17:23:44.510182 ARP, Ethernet (len 6), IPv4 (len 4), Reply 192.168.66.1 is-at 44:df:65:d8:fe:6c, length 28<br>
+
+
+> 🔎 **Observação importante:** Um ARP Request ou ARP Reply **não é encapsulado em um pacote UDP nem IP**. Ele é encapsulado **diretamente dentro de um quadro Ethernet** (ou seja, atua puramente na camada de enlace — Layer 2).
+
