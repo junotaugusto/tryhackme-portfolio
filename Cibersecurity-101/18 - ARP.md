@@ -1,4 +1,4 @@
-## ARP – Address Resolution Protocol
+# ARP – Address Resolution Protocol
 
 No módulo sobre **Conceitos de Rede** vimos que, ao se comunicarem em uma rede, dois hosts transmitem pacotes IP encapsulados dentro de quadros da camada de enlace (Layer 2). As duas tecnologias mais comuns usadas nessa camada são **Ethernet (IEEE 802.3)** e **WiFi (IEEE 802.11)**.
 
@@ -6,7 +6,7 @@ Sempre que um host precisa se comunicar com outro **na mesma rede local (LAN)**,
 
 ---
 
-### 📌 O que é um endereço MAC?
+## 📌 O que é um endereço MAC?
 
 Um **endereço MAC** é um número de 48 bits (geralmente representado em **notação hexadecimal**) e serve para identificar **dispositivos físicos** em uma rede local. Exemplos reais:
 
@@ -17,7 +17,7 @@ Cada dispositivo de rede (como computadores, roteadores e impressoras) possui um
 
 ---
 
-### 🔁 MACs só são usados durante a comunicação
+## 🔁 MACs só são usados durante a comunicação
 
 Os dispositivos em uma rede Ethernet **não precisam conhecer os MACs uns dos outros o tempo todo**. Eles só precisam desses dados **no momento da comunicação**. Toda a lógica de comunicação gira em torno dos **endereços IP**.
 
