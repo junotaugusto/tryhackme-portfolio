@@ -16,8 +16,7 @@ Existem vários tipos de registros DNS. Neste exercício, focaremos em quatro pr
   Exemplo: `example.com` pode ser resolvido para `172.17.2.172`.
 
 - **Registro AAAA (quad-A):** Semelhante ao Registro A, mas para endereços **IPv6**.  
-  > ⚠️ Lembre-se: AAAA (quatro letras A) — não confunda com **AA** ou **AAA**, que são tamanhos de bateria ou referem-se a **Autenticação, Autorização e Auditoria (AAA)**.
-
+  
 - **Registro CNAME (Canonical Name):** Mapeia um nome de domínio para outro nome de domínio.  
   Exemplo: `www.example.com` pode apontar para `example.com` ou até mesmo `example.org`.
 
