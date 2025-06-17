@@ -50,7 +50,7 @@ A captura de tela abaixo do Wireshark mostra:
 - A **resposta do servidor web** (em azul)
 
 ![alt text](screenshot-1.png)
-
+ 
 > 🧠 **Comentário:** Embora o usuário final só veja o conteúdo da página, muitos dados técnicos são trocados entre cliente e servidor que **não aparecem na interface do usuário**. Exemplos:
 > - Versão do servidor web (como Apache/2.4.51)
 > - Data da última modificação da página
