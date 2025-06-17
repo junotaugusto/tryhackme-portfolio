@@ -44,10 +44,12 @@ O navegador recupera a página web e a exibe normalmente. No entanto, nosso foco
 
 Utilizando o **Wireshark**, podemos examinar com mais detalhes a comunicação entre o navegador **Firefox** e o servidor web.
 
-A captura de tela do Wireshark mostra:
+A captura de tela abaixo do Wireshark mostra:
 
 - O **texto enviado pelo navegador** (em vermelho)
 - A **resposta do servidor web** (em azul)
+
+![alt text](screenshot-1.png)
 
 > 🧠 **Comentário:** Embora o usuário final só veja o conteúdo da página, muitos dados técnicos são trocados entre cliente e servidor que **não aparecem na interface do usuário**. Exemplos:
 > - Versão do servidor web (como Apache/2.4.51)
