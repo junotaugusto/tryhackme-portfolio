@@ -87,7 +87,7 @@ Connection closed by foreign host.<br>
 
 Isso significa que qualquer pessoa monitorando a rede (com ferramentas como Wireshark) pode **ver senhas e conteúdo de mensagens**, como mostra a imagem abaixo:
 
-**imagem**
+![alt text](POP3-2.png)
 
 As capturas do Wireshark distinguem:
 - **Comandos do cliente** → em vermelho
