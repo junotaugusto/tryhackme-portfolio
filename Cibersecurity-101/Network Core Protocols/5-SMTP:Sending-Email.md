@@ -66,6 +66,7 @@ Além disso, em ferramentas como o **Wireshark**, é possível visualizar essas 
 - As mensagens do **cliente** aparecem em **vermelho**
 - As respostas do **servidor** aparecem em **azul**
 
+![alt text](email.png)
 ---
 
 ## 🔐 Observação de Segurança
@@ -73,5 +74,3 @@ Além disso, em ferramentas como o **Wireshark**, é possível visualizar essas 
 Apesar de educativo, **nunca envie e-mails reais com telnet em redes abertas ou não confiáveis** — o protocolo SMTP puro **não criptografa** os dados transmitidos.
 
 ---
-
-Se quiser, posso te mostrar como fazer isso com autenticação (SMTP AUTH) ou como ver esse tráfego no Wireshark.
