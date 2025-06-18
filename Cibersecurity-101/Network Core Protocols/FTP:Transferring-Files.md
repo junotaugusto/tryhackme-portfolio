@@ -65,3 +65,5 @@ Usamos o **Wireshark** para examinar mais de perto as mensagens trocadas entre c
 Note que os comandos digitados pelo usuário nem sempre são enviados ao servidor com o mesmo nome. Por exemplo, ao digitar `ls`, o cliente envia o comando `LIST` ao servidor.
 
 Outro detalhe importante: **tanto a listagem de diretório quanto o arquivo baixado são transferidos por conexões separadas**, distintas da conexão principal de controle (porta 21).
+
+![alt text](FTP.png)
