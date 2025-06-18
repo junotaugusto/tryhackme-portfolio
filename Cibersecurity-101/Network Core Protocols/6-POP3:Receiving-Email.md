@@ -15,7 +15,7 @@ Sem entrar nos detalhes técnicos mais profundos:
 > - **SMTP** = caixa de coleta dos Correios.
 > - **POP3** = sua caixinha de cartas na frente de casa.
 
-![alt text](POP3-1.png)
+![alt text](/Cibersecurity-101/Network%20Core%20Protocols/IMAGENS/POP3-1.png)
 
 ## 🔧 Comandos POP3 mais usados
 

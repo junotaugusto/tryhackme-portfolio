@@ -38,7 +38,7 @@ O navegador recupera a página web e a exibe normalmente. No entanto, nosso foco
 
 > 🧪 **Comentário:** Ferramentas como os painéis de desenvolvedor dos navegadores (F12) e programas como Wireshark permitem visualizar essas interações em detalhes — algo crucial para quem está aprendendo sobre redes e segurança web.
 
-![alt text](webpage.png)
+![alt text](/Cibersecurity-101/Network%20Core%20Protocols/IMAGENS/webpage.png)
 
 ## Analisando HTTP com o Wireshark
 

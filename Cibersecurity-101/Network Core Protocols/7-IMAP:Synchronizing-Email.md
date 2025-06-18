@@ -106,7 +106,7 @@ A captura do Wireshark abaixo mostra a troca entre o cliente e o servidor IMAP.
 - Os **comandos enviados pelo cliente** (ex: `LOGIN`, `FETCH`, etc.) aparecem em **vermelho**
 - As **respostas longas do servidor** aparecem em **azul**
 
-![alt text](IMAP.png)
+![alt text](/Cibersecurity-101/Network%20Core%20Protocols/IMAGENS/IMAP.png)
 
 > 🔍 Neste exemplo, bastaram **quatro comandos** para autenticar, selecionar a caixa, buscar a mensagem e sair.
 

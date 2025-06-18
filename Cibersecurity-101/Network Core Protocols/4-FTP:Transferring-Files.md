@@ -66,7 +66,7 @@ Note que os comandos digitados pelo usuário nem sempre são enviados ao servido
 
 Outro detalhe importante: **tanto a listagem de diretório quanto o arquivo baixado são transferidos por conexões separadas**, distintas da conexão principal de controle (porta 21).
 
-![alt text](FTP.png)
+![alt text](/Cibersecurity-101/Network%20Core%20Protocols/IMAGENS/FTP.png)
 
 No exercício em questão, o Try Hack Me pede para pegar, pelo meio do FTP, o arquivo flag.txt, feito da seguinte maneira:
 "get flag.txt"

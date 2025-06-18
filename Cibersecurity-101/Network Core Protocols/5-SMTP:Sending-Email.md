@@ -66,7 +66,7 @@ Além disso, em ferramentas como o **Wireshark**, é possível visualizar essas 
 - As mensagens do **cliente** aparecem em **vermelho**
 - As respostas do **servidor** aparecem em **azul**
 
-![alt text](email.png)
+![alt text](/Cibersecurity-101/Network%20Core%20Protocols/IMAGENS/email.png)
 ---
 
 ## 🔐 Observação de Segurança
