@@ -49,7 +49,7 @@ A captura de tela abaixo do Wireshark mostra:
 - O **texto enviado pelo navegador** (em vermelho)
 - A **resposta do servidor web** (em azul)
 
-![alt text](screenshot-1.png)
+![alt text](/Cibersecurity-101/Network%20Core%20Protocols/IMAGENS/screenshot-1.png)
  
 > 🧠 **Comentário:** Embora o usuário final só veja o conteúdo da página, muitos dados técnicos são trocados entre cliente e servidor que **não aparecem na interface do usuário**. Exemplos:
 > - Versão do servidor web (como Apache/2.4.51)
