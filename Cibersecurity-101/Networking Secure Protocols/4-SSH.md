@@ -18,12 +18,12 @@ Você usaria o comando `ssh usuario@nome-do-host` para se conectar a um servidor
 
 Se o nome de usuário for o mesmo que o do seu login atual, você só precisa usar `ssh nome-do-host`, ou seja, se você estiver logado no seu computador como, por exemplo, fulano, e o servidor remoto também tiver um usuário com esse mesmo nome (fulano), então você não precisa digitar o nome de usuário no comando. O SSH vai presumir que o usuário remoto é o mesmo que o local. 
 
-Em seguida, será solicitado que você insira uma senha; no entanto, **se for usada a autenticação por chave pública, você será conectado imediatamente.** -> Antes de continuar, uma explicação sobre isso:
+Em seguida, será solicitado que você insira uma senha; no entanto, **se for usada a autenticação por chave pública, você será conectado imediatamente.**<br> -> Antes de continuar, uma explicação sobre isso:
 
 Existem duas formas de autenticação possíveis após tentar a conexão:
-**Por senha:**
+**Por senha:**<br>
 O método padrão. Depois de enviar o comando SSH, o servidor vai pedir sua senha para permitir o acesso.
-**Por meio de uma chave pública (public key authentication):**
+**Por meio de uma chave pública (public key authentication):**<br>
 Se você já configurou uma chave pública no servidor e a chave privada correspondente está no seu computador, o SSH vai usá-la automaticamente.
 
 Você não precisará digitar a senha — a autenticação é feita com base na correspondência entre a chave pública (no servidor) e a privada (no seu cliente/local). **É o que ocorre quando enviamos um commit com o 'git push' ao Github via SSH**
