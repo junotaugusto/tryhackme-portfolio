@@ -14,7 +14,21 @@ O OpenSSH oferece vários benefícios. Vamos listar alguns pontos principais:
 - **Túnel (Tunneling)**: o SSH pode criar um “túnel” seguro para encaminhar outros protocolos através do SSH. Essa configuração leva a uma conexão semelhante a uma VPN.  
 - **Encaminhamento X11 (X11 Forwarding)**: se você se conectar a um sistema do tipo Unix com interface gráfica, o SSH permite que você use o aplicativo gráfico pela rede.
 
-Você usaria o comando `ssh usuario@nome-do-host` para se conectar a um servidor SSH. Se o nome de usuário for o mesmo que o do seu login atual, você só precisa usar `ssh nome-do-host`. Em seguida, será solicitado que você insira uma senha; no entanto, se for usada a autenticação por chave pública, você será conectado imediatamente.
+Você usaria o comando `ssh usuario@nome-do-host` para se conectar a um servidor SSH. 
+
+Se o nome de usuário for o mesmo que o do seu login atual, você só precisa usar `ssh nome-do-host`, ou seja, se você estiver logado no seu computador como, por exemplo, fulano, e o servidor remoto também tiver um usuário com esse mesmo nome (fulano), então você não precisa digitar o nome de usuário no comando. O SSH vai presumir que o usuário remoto é o mesmo que o local. 
+
+Em seguida, será solicitado que você insira uma senha; no entanto, **se for usada a autenticação por chave pública, você será conectado imediatamente.** -> Antes de continuar, uma explicação sobre isso:
+
+Existem duas formas de autenticação possíveis após tentar a conexão:
+**Por senha:**
+O método padrão. Depois de enviar o comando SSH, o servidor vai pedir sua senha para permitir o acesso.
+**Por meio de uma chave pública (public key authentication):**
+Se você já configurou uma chave pública no servidor e a chave privada correspondente está no seu computador, o SSH vai usá-la automaticamente.
+
+Você não precisará digitar a senha — a autenticação é feita com base na correspondência entre a chave pública (no servidor) e a privada (no seu cliente/local). **É o que ocorre quando enviamos um commit com o 'git push' ao Github via SSH**
+
+Lembrando aqui que o **usuário** refere-se ao nome da conta no servidor ao qual você quer se conectar e o **nome-do-host** pode ser o domínio (ex: meuservidor.com) ou o IP (ex: 192.168.1.10) do servidor.
 
 A captura de tela abaixo mostra um exemplo de execução do Wireshark em um sistema Kali Linux remoto. O argumento `-X` é necessário para dar suporte à execução de interfaces gráficas, por exemplo  ssh 192.168.124.148 -X (o sistema local precisa ter um sistema gráfico apropriado instalado):
 
