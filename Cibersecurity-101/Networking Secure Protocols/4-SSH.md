@@ -1,6 +1,10 @@
 # SSH: Uma Alternativa Segura ao Telnet
 
-Usamos o protocolo TELNET na sala Networking Concepts. Embora seja muito conveniente para fazer login e administrar sistemas remotos, é arriscado quando todo o tráfego é enviado em texto claro. É fácil para qualquer pessoa monitorando o tráfego de rede obter suas credenciais de login assim que você usar telnet. Esse problema exigiu uma solução. Tatu Ylönen desenvolveu o protocolo Secure Shell (SSH) e lançou o SSH-1 em 1995 como freeware. (Curiosamente, foi o mesmo ano em que a Netscape Communications lançou o protocolo SSL 2.0.) Uma versão mais segura, o SSH-2, foi definida em 1996. Em 1999, os desenvolvedores do OpenBSD lançaram o OpenSSH, uma implementação de código aberto do SSH. Hoje em dia, quando você usa um cliente SSH, é muito provável que ele seja baseado nas bibliotecas e no código-fonte do OpenSSH.
+Usamos o protocolo TELNET na sala Networking Concepts. Embora seja muito conveniente para fazer login e administrar sistemas remotos, é arriscado quando todo o tráfego é **enviado em texto claro**. É fácil para qualquer pessoa monitorando o tráfego de rede obter suas credenciais de login assim que você usar telnet. Esse problema exigiu uma solução. 
+
+**Tatu Ylönen** desenvolveu o protocolo Secure Shell (SSH) e lançou o SSH-1 em 1995 como freeware. (Curiosamente, foi o mesmo ano em que a Netscape Communications lançou o protocolo SSL 2.0.) 
+
+Uma versão mais segura, o SSH-2, foi definida em 1996. Em 1999, os desenvolvedores do OpenBSD lançaram o OpenSSH, uma implementação de código aberto do SSH. Hoje em dia, quando você usa um cliente SSH, é muito provável que ele seja baseado nas bibliotecas e no código-fonte do **OpenSSH**.
 
 O OpenSSH oferece vários benefícios. Vamos listar alguns pontos principais:
 
