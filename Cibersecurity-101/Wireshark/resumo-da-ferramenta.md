@@ -68,4 +68,29 @@ A coloração permanente padrão é mostrada abaixo.
 
 ![alt text](/Cibersecurity-101/Wireshark/IMAGENS/ferramenta-3.png)
 
+# Sniffing de Tráfego
 
+Você pode usar o botão azul com o “ícone de tubarão” para iniciar o sniffing de rede (captura de tráfego), o botão vermelho interromperá o sniffing e o botão verde reiniciará o processo de sniffing. 
+
+A barra de status também fornecerá a interface de sniffing usada e o número de pacotes coletados.
+
+![alt text](/Cibersecurity-101/Wireshark/IMAGENS/ferramenta-4.png)
+
+# Mesclar Arquivos PCAP
+
+O Wireshark pode combinar dois arquivos pcap em um único arquivo. Você pode usar o caminho de menu **“Arquivo → Mesclar”** para mesclar um pcap com o que está sendo processado.  
+
+Quando você escolher o segundo arquivo, o Wireshark mostrará o número total de pacotes no arquivo selecionado.  
+
+Assim que você clicar em **“abrir”**, ele irá mesclar o arquivo pcap existente com o escolhido e criar um novo arquivo pcap.  
+**Observe que você precisa salvar o arquivo pcap “mesclado” antes de trabalhar nele.**
+
+Imagem em "see image".
+
+# Visualizar Detalhes do Arquivo
+
+Conhecer os detalhes do arquivo é útil. Especialmente ao trabalhar com vários arquivos pcap, às vezes você precisará saber e lembrar os detalhes do arquivo (**hash do arquivo, hora da captura, comentários do arquivo de captura, interface e estatísticas**) para identificá-lo, classificá-lo e priorizá-lo.
+
+Você pode visualizar os detalhes seguindo **“Estatísticas → Propriedades do Arquivo de Captura”** ou clicando no **“ícone de pcap localizado no canto inferior esquerdo”** da janela.
+
+Imagem em "see image".
