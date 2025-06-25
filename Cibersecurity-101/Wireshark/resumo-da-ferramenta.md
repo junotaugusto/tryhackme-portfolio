@@ -56,14 +56,16 @@ Esse panorama das informações dos pacotes pode ajudar a rastrear exatamente o 
 Agora, vamos focar nos padrões e entender como visualizar e usar os detalhes de dados representados.
 
 O Wireshark possui dois tipos de métodos de coloração de pacotes:  
-**regras temporárias**, que estão disponíveis apenas durante uma sessão do programa, e  
-**regras permanentes**, que são salvas no arquivo de preferências (perfil) e disponíveis para a próxima sessão do programa.
+**1 - Regras Temporárias:** Estão disponíveis apenas durante uma sessão do programa.
+
+**2 - Regras Permanentes:** São salvas no arquivo de preferências (perfil) e disponíveis para a próxima sessão do programa.
 
 Você pode usar o “menu do botão direito” ou o menu **“Exibir → Regras de Coloração”** para criar regras de coloração permanentes. 
 
-O menu **“Colorir Lista de Pacotes”** ativa/desativa as regras de coloração.  
-A coloração temporária de pacotes é feita com o “menu do botão direito” ou o menu **“Exibir → Filtro de Conversa”**, que será abordado na TAREFA-5.
+O menu **“Colorir Lista de Pacotes”** ativa/desativa as regras de coloração.  A coloração temporária de pacotes é feita com o “menu do botão direito” ou o menu **“Exibir → Filtro de Conversa”**, que será abordado na TAREFA-5.
 
 A coloração permanente padrão é mostrada abaixo.
+
+![alt text](/Cibersecurity-101/Wireshark/IMAGENS/ferramenta-3.png)
 
 
